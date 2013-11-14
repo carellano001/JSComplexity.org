@@ -15,28 +15,32 @@ function getFunctionModel (data) {
                 value: data.line
             },
             {
-                label: 'Physical LOC',
-                value: data.complexity.sloc.physical
+                label: 'Logical LOC',
+                value: data.sloc.logical
             },
             {
-                label: 'Logical LOC',
-                value: data.complexity.sloc.logical
+                label: 'Parameter count',
+                value: data.params
             },
             {
                 label: 'Cyclomatic complexity',
-                value: data.complexity.cyclomatic
+                value: data.cyclomatic
+            },
+            {
+                label: 'Cyclomatic complexity density',
+                value: Math.round(data.cyclomaticDensity) + '%'
             },
             {
                 label: 'Halstead difficulty',
-                value: data.complexity.halstead.difficulty
+                value: Math.round(data.halstead.difficulty)
             },
             {
                 label: 'Halstead volume',
-                value: data.complexity.halstead.volume
+                value: Math.round(data.halstead.volume)
             },
             {
                 label: 'Halstead effort',
-                value: data.complexity.halstead.effort
+                value: Math.round(data.halstead.effort)
             }
         ]
     };
